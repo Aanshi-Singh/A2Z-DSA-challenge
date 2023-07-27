@@ -178,6 +178,11 @@ void multiSetTUT(){
     ms.erase(ms.find(1)+1, ms.find(1)+2);// { }==> _ _ _
 }
 
+void unorderedSet(){
+    unordered_set<int> st;
+    //same as set
+}
+
 int main(){
 
     //Pairs
@@ -207,4 +212,8 @@ int main(){
     //multi sets
     multiSetTUT();//stores elemets in sorted format but not uniquely
 
+    //unordered set
+    unorderedSet(); //stores elements uniquely but not in sorted format. in most of the cases O(1) and lower and upper bond functions does not work.
+    //for worst case o(N)
+    
 }
