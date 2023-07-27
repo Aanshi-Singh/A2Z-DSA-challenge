@@ -162,7 +162,20 @@ void setTUT(){
 
     auto it = st.lower_bound(2);
     auto it = st.upper_bound(3);
+}
 
+void multiSetTUT(){
+    multiset<int>ms;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1); // {1 1 1}
+
+    ms.erase(1); // erases all 1
+
+    int cnt = ms.count(1); // 3, returns the number of 1's present in the set.
+
+    ms.erase(ms.find(1)); // 1 1 ==> 1 _ 1 
+    ms.erase(ms.find(1)+1, ms.find(1)+2);// { }==> _ _ _
 }
 
 int main(){
@@ -190,4 +203,8 @@ int main(){
  
     //sets -> stores elements in sorted and unique order
     setTUT(); // pop, top, push --> log(n)
+
+    //multi sets
+    multiSetTUT();//stores elemets in sorted format but not uniquely
+
 }
