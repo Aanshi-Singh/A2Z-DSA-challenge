@@ -133,7 +133,7 @@ void queueTUT(){
 }
 
 void priorityQueuetut(){
-    priority_queue<int>pq;
+    priority_queue<int>pq; // max heap
     pq.push(1);
     pq.push(2);
     pq.push(3);// 3 2 1
@@ -141,15 +141,30 @@ void priorityQueuetut(){
     pq.pop(); // 2 1
 
     //minimum HEAP
-    priority_queue<int, vector<int>, greator<int>> pq;
+    priority_queue<int, vector<int>, greater<int>> pq;
     pq.push(5);
     pq.push(4);
-    pq.push(7);// 4 5 7
-
+    pq.push(7);// 4 5 
     cout<<pq.top();// 4
+}
+void setTUT(){
+    set<int> st;
+    st.insert(1);
+    st.insert(2);
+    st.insert(2);
+    st.insert(4);
+    st.insert(3); // 1 2 3 4
 
+    auto it = st.find(3);// returns the iterator
+    st.erase(2); // erases 2, if the element is not present in the set , the iterator will return st.end()
+
+    int cnt = st.count(3);// return 1 or 0 (present in the set or not)
+
+    auto it = st.lower_bound(2);
+    auto it = st.upper_bound(3);
 
 }
+
 int main(){
 
     //Pairs
@@ -173,4 +188,6 @@ int main(){
     //priority queue
     priorityQueuetut();// the largest element stays on the top, the data is not strored linearly it is stored in a tree fashion
  
+    //sets -> stores elements in sorted and unique order
+    setTUT(); // pop, top, push --> log(n)
 }
