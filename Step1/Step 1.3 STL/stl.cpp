@@ -130,10 +130,26 @@ void queueTUT(){
     q.pop();// 2 8
     q.size();
     q1.swap(q2)
+}
+
+void priorityQueuetut(){
+    priority_queue<int>pq;
+    pq.push(1);
+    pq.push(2);
+    pq.push(3);// 3 2 1
+    cout<<pq.top();//3
+    pq.pop(); // 2 1
+
+    //minimum HEAP
+    priority_queue<int, vector<int>, greator<int>> pq;
+    pq.push(5);
+    pq.push(4);
+    pq.push(7);// 4 5 7
+
+    cout<<pq.top();// 4
 
 
 }
-
 int main(){
 
     //Pairs
@@ -153,5 +169,8 @@ int main(){
 
     //Queue FIFO
     queueTUT();
+
+    //priority queue
+    priorityQueuetut();// the largest element stays on the top, the data is not strored linearly it is stored in a tree fashion
  
 }
