@@ -98,10 +98,24 @@ void dequeTUT(){
 
     dq.back();
     dq.front();
-
-    
-
     }
+
+void stackTUT(){
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.emplace(5); // 5 3 2 1
+
+    cout<<st.top(); // 5
+    // st[2] is invalid
+    st.pop();//st = 3 2 1
+    st.size();
+    st.empty();// T OR F
+
+    stack<int> st1, st2;
+    st1.swap(st2);
+}
 
 int main(){
 
@@ -116,5 +130,8 @@ int main(){
     
     //dequeue
     dequeTUT();
+
+    //stack LIFO
+    stackTUT();
  
 }
