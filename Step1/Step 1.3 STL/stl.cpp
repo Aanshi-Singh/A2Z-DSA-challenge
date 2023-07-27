@@ -117,13 +117,30 @@ void stackTUT(){
     st1.swap(st2);
 }
 
+void queueTUT(){
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.emplace(3); // 1 2 3
+
+    q.back()+=5;
+    cout<<q.back();// 8  q--> 1 2 8
+
+    cout<<q.front();// print 1
+    q.pop();// 2 8
+    q.size();
+    q1.swap(q2)
+
+
+}
+
 int main(){
 
     //Pairs
     pairTUT();
 
     //Vectors
-    // vectorTUT();
+    vectorTUT();
 
     //Lists
     listTUT();
@@ -133,5 +150,8 @@ int main(){
 
     //stack LIFO
     stackTUT();
+
+    //Queue FIFO
+    queueTUT();
  
 }
