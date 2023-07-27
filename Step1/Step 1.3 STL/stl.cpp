@@ -183,6 +183,26 @@ void unorderedSet(){
     //same as set
 }
 
+void mapTUT(){
+    map<int, pair<int, int>>mpp;
+    map<pair<int,int>,int> mapp;
+    map<int, int>mpp;
+
+    mpp[1] = 2;
+    mpp.emplace({3,1});
+    mpp.insert({2,4});
+
+    for(auto it : mpp){
+        cout<<it.first;
+    }
+    cout<<mpp[1];
+
+
+    //unoreder map ==> unique but not sorted
+    // map=> o(log(n)) and unoreder => o(1) {worst => o(n)}
+    
+}
+
 int main(){
 
     //Pairs
@@ -215,5 +235,8 @@ int main(){
     //unordered set
     unorderedSet(); //stores elements uniquely but not in sorted format. in most of the cases O(1) and lower and upper bond functions does not work.
     //for worst case o(N)
-    
+
+    //map
+    mapTUT();
+
 }
