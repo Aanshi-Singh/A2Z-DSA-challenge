@@ -63,7 +63,7 @@ void vectorTUT(){
 
     //size
     v.size()
-    
+
     //swap
     v.swap(v1);
 
@@ -76,13 +76,27 @@ void vectorTUT(){
     v.empty()// returns true / false
 }
 
+void listTUT(){
+ list<int> ls;
+ ls.push_back(1);// {1}
+ ls.emplace_back(2);//{1,2}
+
+ ls.push_front(-1);// {-1 1 2}
+ // insert in vector is costlier than push_front in list
+//rest same as vec -> size, clear , begin, end, swap
+}
+
+
 int main(){
 
     //Pairs
     pairTUT();
 
     //Vectors
-    vectorTUT();
+    // vectorTUT();
+
+    //Lists
+    listTUT();
     
  
 }
