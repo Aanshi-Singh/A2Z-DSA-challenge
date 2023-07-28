@@ -239,4 +239,10 @@ int main(){
     //map
     mapTUT();
 
+    //extra funtions
+    sort(a, a+n);// arrays
+    sort(v.begin(), v.end());// vector
+    sort(a, a+n, greater<int>);// descending
+
+
 }
