@@ -9,6 +9,7 @@ int calcGCD(int n, int m){
         }
         return ans;
     
+// o(n), o(1)
     
 }
 
@@ -35,4 +36,5 @@ int calcGCD(int n, int m){
     
 }
 
+// O(log(min(a,b))), o(1)
 //
