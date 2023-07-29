@@ -14,3 +14,5 @@ vector<int> printNos(int x) {
     vect(vec, x);
     return vec;
 }
+
+// o(n), o(n)
