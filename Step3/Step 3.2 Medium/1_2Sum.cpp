@@ -31,3 +31,24 @@ string read(int n, vector<int> book, int target)
     return "NO";
 }
 // o(nlogn), o(n)
+
+// SOL NO. 3:
+#include <bits/stdc++.h>
+string read(int n, vector<int> book, int target)
+{
+    // Write your code here.
+   //2 pointer
+   sort(book.begin(), book.end());
+   int left = 0;
+   int right = n-1;
+   while(left<right){
+       int sum = book[left]+book[right];
+       if(sum == target){
+           return "YES";
+       }
+       else if(sum>target) right --;
+       else left ++;
+   }
+   return "NO";
+}
+// O(n*log(n)), o(1)
