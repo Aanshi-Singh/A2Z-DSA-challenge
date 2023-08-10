@@ -74,6 +74,10 @@ void vectorTUT(){
     v.pop_back();// [10,20] --> [10]
 
     v.empty()// returns true / false
+
+    vector<int> temp = {arr[i], arr[j], arr[k]};
+    vector<vector<int>> ans(st.begin(), st.end()); // st is a set;
+
 }
 
 void listTUT(){
@@ -162,6 +166,9 @@ void setTUT(){
 
     auto it = st.lower_bound(2);
     auto it = st.upper_bound(3);
+
+    set<vector<int>> st;
+
 }
 
 void multiSetTUT(){
