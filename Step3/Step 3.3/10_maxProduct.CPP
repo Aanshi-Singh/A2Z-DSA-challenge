@@ -16,3 +16,21 @@ public:
 }
 
 };
+
+// sol 2 /
+
+class Solution {
+public:
+    int maxProduct(vector<int>& arr) {
+        int pro1 = arr[0], pro2 = arr[0], n = arr.size();
+        int ans = arr[0];
+        for(int i = 1; i < n; i++){
+            int temp = max({arr[i], arr[i]*pro1, arr[i]*pro2});
+            pro2 = min({arr[i], arr[i]*pro2, arr[i]*pro1});
+            pro1 = temp;
+            ans = max(ans, temp);
+        }
+        return ans;
+    }
+    
+};
